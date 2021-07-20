@@ -6,21 +6,23 @@
   "scripts": {
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EvandroMateus/clean-node-api.git"
+  "standard": {
+    "env": [
+      "jest"
+    ]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EvandroMateus/clean-node-api/issues"
-  },
-  "homepage": "https://github.com/EvandroMateus/clean-node-api#readme",
   "devDependencies": {
     "husky": "^4.3.8",
     "jest": "^27.0.6",
+    "@types/jest": "^26.0.24",
     "lint-staged": "^11.0.1",
     "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3"
   }
 }
