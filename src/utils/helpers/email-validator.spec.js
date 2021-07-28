@@ -1,5 +1,6 @@
 const EmailValidator = require('./email-validator')
 const validator = require('validator')
+const { MissingParamError } = require('../errors')
 
 const makeSut = () => {
   return new EmailValidator()
@@ -19,9 +20,14 @@ describe('Email Validator', () => {
     expect(isEmailValid).toBe(false)
   })
 
-  test('Should call validator correct email', () => {
+  test('Should call validator with correct email', () => {
     const sut = makeSut()
     sut.isValid('email@email.com')
     expect(validator.email).toBe('email@email.com')
+  })
+
+  test('Should throw if no email are provided', async () => {
+    const sut = makeSut()
+    expect(() => sut.isValid()).toThrow(new MissingParamError('email')) // isValid é um metodo não assincrono
   })
 })
