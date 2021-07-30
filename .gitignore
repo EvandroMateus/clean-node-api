@@ -1,3 +1,4 @@
 node_modules
 reference-login.js
 coverage
+globalConfig.json
