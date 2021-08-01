@@ -4,7 +4,7 @@
   "description": "API Rest em NodeJS aplicando TDD, Clean Architecture e Design Patterns seguindo as aulas do Rodrigo Manguinho",
   "main": "index.js",
   "scripts": {
-    "test": "jest --colors --passWithNoTests --noStackTrace",
+    "test": "jest --colors --passWithNoTests",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --silent",
