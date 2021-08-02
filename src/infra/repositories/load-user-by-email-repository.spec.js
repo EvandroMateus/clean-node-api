@@ -15,7 +15,7 @@ const makeSut = () => {
 
 describe('LoadUserByEmail Repository', () => {
   beforeAll(async () => {
-    await MongoHelper.connect(process.env.MONGO_URL)
+    await MongoHelper.connectDb(process.env.MONGO_URL)
     db = await MongoHelper.getDb()
   })
 
