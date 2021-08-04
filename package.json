@@ -5,11 +5,11 @@
   "main": "src/main/index.js",
   "scripts": {
     "start": "node src/main",
-    "test": "jest --colors --passWithNoTests --noStackTrace --runInBand --forceExit",
+    "test": "jest --colors --passWithNoTests --noStackTrace --runInBand --forceExit --silent",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
-    "test:staged": "npm test -- --silent",
-    "test:ci": "npm test -- --silent --coverage"
+    "test:staged": "npm test --",
+    "test:ci": "npm test -- --coverage"
   },
   "standard": {
     "env": [
